@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="StyleSheet.css">
+</head>
+
+
+<body>
+
+    <h1>Add Text Multiple Times</h1>
+
+    <input type="text" id="textinput" placeholder="enter some text" />
+    <button id="addbutton">Add Text</button>
+    <div id="output"></div>
+
+    <script>
+
+        document.getElementById("addbutton").addEventListener("click", function () {
+            
+            const inputText = document.getElementById("textinput").value; // Get the input value
+            let outputHtml = ""; // Initialize an empty string for output
+
+            for (let i = 0; i < 10; i++) {
+                outputHtml += inputText + "<br>"; // Append new text with line break
+            }
+
+            document.getElementById("output").innerHTML = outputHtml; // Set the innerHTML once
+        })
+
+    </script>
+
+</body>
+
+</html>
